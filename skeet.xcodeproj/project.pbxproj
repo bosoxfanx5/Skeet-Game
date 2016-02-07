@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		849050351C6676D300B4873B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050341C6676D300B4873B /* main.cpp */; };
+		849050421C6676F200B4873B /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490503B1C6676F200B4873B /* point.cpp */; };
+		849050431C6676F200B4873B /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490503D1C6676F200B4873B /* uiDraw.cpp */; };
+		849050441C6676F200B4873B /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490503F1C6676F200B4873B /* uiInteract.cpp */; };
+		849050451C6676F200B4873B /* uiTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050411C6676F200B4873B /* uiTest.cpp */; };
+		849050471C66770A00B4873B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849050461C66770A00B4873B /* OpenGL.framework */; };
+		849050491C66771100B4873B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849050481C66771100B4873B /* GLUT.framework */; };
+		8490504C1C670ED900B4873B /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490504A1C670ED900B4873B /* frame.cpp */; };
+		8490504F1C67106900B4873B /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490504D1C67106900B4873B /* item.cpp */; };
+		849050521C67121E00B4873B /* velocity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050501C67121E00B4873B /* velocity.cpp */; };
+		849050551C67136D00B4873B /* rifle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050531C67136D00B4873B /* rifle.cpp */; };
+		849050581C6713FC00B4873B /* bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050561C6713FC00B4873B /* bullet.cpp */; };
+		8490505B1C6714A800B4873B /* pigeon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050591C6714A800B4873B /* pigeon.cpp */; };
+		8490505E1C6715C900B4873B /* banner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490505C1C6715C900B4873B /* banner.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +36,29 @@
 
 /* Begin PBXFileReference section */
 		849050311C6676D300B4873B /* skeet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = skeet; sourceTree = BUILT_PRODUCTS_DIR; };
-		849050341C6676D300B4873B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8490503B1C6676F200B4873B /* point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = point.cpp; sourceTree = "<group>"; };
+		8490503C1C6676F200B4873B /* point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = point.h; sourceTree = "<group>"; };
+		8490503D1C6676F200B4873B /* uiDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiDraw.cpp; sourceTree = "<group>"; };
+		8490503E1C6676F200B4873B /* uiDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiDraw.h; sourceTree = "<group>"; };
+		8490503F1C6676F200B4873B /* uiInteract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiInteract.cpp; sourceTree = "<group>"; };
+		849050401C6676F200B4873B /* uiInteract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiInteract.h; sourceTree = "<group>"; };
+		849050411C6676F200B4873B /* uiTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiTest.cpp; sourceTree = "<group>"; };
+		849050461C66770A00B4873B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		849050481C66771100B4873B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		8490504A1C670ED900B4873B /* frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
+		8490504B1C670ED900B4873B /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
+		8490504D1C67106900B4873B /* item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
+		8490504E1C67106900B4873B /* item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
+		849050501C67121E00B4873B /* velocity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = velocity.cpp; sourceTree = "<group>"; };
+		849050511C67121E00B4873B /* velocity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = velocity.h; sourceTree = "<group>"; };
+		849050531C67136D00B4873B /* rifle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rifle.cpp; sourceTree = "<group>"; };
+		849050541C67136D00B4873B /* rifle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rifle.h; sourceTree = "<group>"; };
+		849050561C6713FC00B4873B /* bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bullet.cpp; sourceTree = "<group>"; };
+		849050571C6713FC00B4873B /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bullet.h; sourceTree = "<group>"; };
+		849050591C6714A800B4873B /* pigeon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pigeon.cpp; sourceTree = "<group>"; };
+		8490505A1C6714A800B4873B /* pigeon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pigeon.h; sourceTree = "<group>"; };
+		8490505C1C6715C900B4873B /* banner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = banner.cpp; sourceTree = "<group>"; };
+		8490505D1C6715C900B4873B /* banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = banner.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849050491C66771100B4873B /* GLUT.framework in Frameworks */,
+				849050471C66770A00B4873B /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +77,8 @@
 		849050281C6676D300B4873B = {
 			isa = PBXGroup;
 			children = (
+				849050481C66771100B4873B /* GLUT.framework */,
+				849050461C66770A00B4873B /* OpenGL.framework */,
 				849050331C6676D300B4873B /* skeet */,
 				849050321C6676D300B4873B /* Products */,
 			);
@@ -57,7 +95,27 @@
 		849050331C6676D300B4873B /* skeet */ = {
 			isa = PBXGroup;
 			children = (
-				849050341C6676D300B4873B /* main.cpp */,
+				8490503B1C6676F200B4873B /* point.cpp */,
+				8490503C1C6676F200B4873B /* point.h */,
+				8490503D1C6676F200B4873B /* uiDraw.cpp */,
+				8490503E1C6676F200B4873B /* uiDraw.h */,
+				8490503F1C6676F200B4873B /* uiInteract.cpp */,
+				849050401C6676F200B4873B /* uiInteract.h */,
+				849050411C6676F200B4873B /* uiTest.cpp */,
+				8490504A1C670ED900B4873B /* frame.cpp */,
+				8490504B1C670ED900B4873B /* frame.h */,
+				8490505C1C6715C900B4873B /* banner.cpp */,
+				8490505D1C6715C900B4873B /* banner.h */,
+				8490504D1C67106900B4873B /* item.cpp */,
+				8490504E1C67106900B4873B /* item.h */,
+				849050501C67121E00B4873B /* velocity.cpp */,
+				849050511C67121E00B4873B /* velocity.h */,
+				849050531C67136D00B4873B /* rifle.cpp */,
+				849050541C67136D00B4873B /* rifle.h */,
+				849050561C6713FC00B4873B /* bullet.cpp */,
+				849050571C6713FC00B4873B /* bullet.h */,
+				849050591C6714A800B4873B /* pigeon.cpp */,
+				8490505A1C6714A800B4873B /* pigeon.h */,
 			);
 			path = skeet;
 			sourceTree = "<group>";
@@ -118,7 +176,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849050351C6676D300B4873B /* main.cpp in Sources */,
+				849050421C6676F200B4873B /* point.cpp in Sources */,
+				849050581C6713FC00B4873B /* bullet.cpp in Sources */,
+				849050521C67121E00B4873B /* velocity.cpp in Sources */,
+				8490504C1C670ED900B4873B /* frame.cpp in Sources */,
+				8490504F1C67106900B4873B /* item.cpp in Sources */,
+				8490505B1C6714A800B4873B /* pigeon.cpp in Sources */,
+				849050551C67136D00B4873B /* rifle.cpp in Sources */,
+				849050431C6676F200B4873B /* uiDraw.cpp in Sources */,
+				849050441C6676F200B4873B /* uiInteract.cpp in Sources */,
+				849050451C6676F200B4873B /* uiTest.cpp in Sources */,
+				8490505E1C6715C900B4873B /* banner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
