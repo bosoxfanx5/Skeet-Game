@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		338E96301C7904BE00CAE062 /* Examplepoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 338E962A1C7904BE00CAE062 /* Examplepoint.cpp */; };
+		338E96311C7904BE00CAE062 /* ExampleuiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 338E962C1C7904BE00CAE062 /* ExampleuiDraw.cpp */; };
+		338E96321C7904BE00CAE062 /* ExampleuiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 338E962E1C7904BE00CAE062 /* ExampleuiInteract.cpp */; };
 		849050421C6676F200B4873B /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490503B1C6676F200B4873B /* point.cpp */; };
 		849050431C6676F200B4873B /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490503D1C6676F200B4873B /* uiDraw.cpp */; };
 		849050441C6676F200B4873B /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490503F1C6676F200B4873B /* uiInteract.cpp */; };
@@ -35,6 +38,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		338E962A1C7904BE00CAE062 /* Examplepoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Examplepoint.cpp; sourceTree = "<group>"; };
+		338E962B1C7904BE00CAE062 /* Examplepoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Examplepoint.h; sourceTree = "<group>"; };
+		338E962C1C7904BE00CAE062 /* ExampleuiDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExampleuiDraw.cpp; sourceTree = "<group>"; };
+		338E962D1C7904BE00CAE062 /* ExampleuiDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleuiDraw.h; sourceTree = "<group>"; };
+		338E962E1C7904BE00CAE062 /* ExampleuiInteract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExampleuiInteract.cpp; sourceTree = "<group>"; };
+		338E962F1C7904BE00CAE062 /* ExampleuiInteract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleuiInteract.h; sourceTree = "<group>"; };
 		849050311C6676D300B4873B /* skeet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = skeet; sourceTree = BUILT_PRODUCTS_DIR; };
 		8490503B1C6676F200B4873B /* point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = point.cpp; sourceTree = "<group>"; };
 		8490503C1C6676F200B4873B /* point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = point.h; sourceTree = "<group>"; };
@@ -74,6 +83,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		338E96291C79041B00CAE062 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				338E962A1C7904BE00CAE062 /* Examplepoint.cpp */,
+				338E962B1C7904BE00CAE062 /* Examplepoint.h */,
+				338E962C1C7904BE00CAE062 /* ExampleuiDraw.cpp */,
+				338E962D1C7904BE00CAE062 /* ExampleuiDraw.h */,
+				338E962E1C7904BE00CAE062 /* ExampleuiInteract.cpp */,
+				338E962F1C7904BE00CAE062 /* ExampleuiInteract.h */,
+			);
+			name = "New Group";
+			path = skeet;
+			sourceTree = "<group>";
+		};
 		849050281C6676D300B4873B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +104,7 @@
 				849050461C66770A00B4873B /* OpenGL.framework */,
 				849050331C6676D300B4873B /* skeet */,
 				849050321C6676D300B4873B /* Products */,
+				338E96291C79041B00CAE062 /* New Group */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,12 +203,15 @@
 				849050421C6676F200B4873B /* point.cpp in Sources */,
 				849050581C6713FC00B4873B /* bullet.cpp in Sources */,
 				849050521C67121E00B4873B /* velocity.cpp in Sources */,
+				338E96301C7904BE00CAE062 /* Examplepoint.cpp in Sources */,
 				8490504C1C670ED900B4873B /* frame.cpp in Sources */,
 				8490504F1C67106900B4873B /* item.cpp in Sources */,
 				8490505B1C6714A800B4873B /* pigeon.cpp in Sources */,
 				849050551C67136D00B4873B /* rifle.cpp in Sources */,
+				338E96321C7904BE00CAE062 /* ExampleuiInteract.cpp in Sources */,
 				849050431C6676F200B4873B /* uiDraw.cpp in Sources */,
 				849050441C6676F200B4873B /* uiInteract.cpp in Sources */,
+				338E96311C7904BE00CAE062 /* ExampleuiDraw.cpp in Sources */,
 				849050451C6676F200B4873B /* uiTest.cpp in Sources */,
 				8490505E1C6715C900B4873B /* banner.cpp in Sources */,
 			);
@@ -305,6 +332,7 @@
 				8490503A1C6676D300B4873B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
