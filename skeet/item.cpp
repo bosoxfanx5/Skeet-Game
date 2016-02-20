@@ -7,19 +7,20 @@
 //
 
 #include "item.h"
+#include "point.h"
 
 //void draw()
 //{
 //
 //}
 
-void move(Point & newLocation)
+void Item::move(Point & newLocation)
 {
-   this.location.setX = newLocation.getX();
-   this.location.setY = newLocation.getY();
+   location.setX(newLocation.getX());
+   location.setY(newLocation.getY());
 }
 
-void turn(int newOrientation)
+void Item::turn(int newOrientation)
 {
-   this.orientation = newOrientation;
+   orientation = newOrientation;
 }

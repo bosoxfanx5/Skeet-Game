@@ -24,8 +24,8 @@ class Item
    private:
       //Member Functions
       void draw();
-      void move();
-      void turn();
+      void move(Point & newLocation);
+      void turn(int newOrientation);
 };
 
 #endif /* item_h */

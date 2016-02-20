@@ -67,7 +67,7 @@ void callBack(const Interface *pUI, void * p)
  * my ball type and call the display engine.
  * That is all!
  *********************************/
-int main(int argc, char ** argv)
+int mainExample(int argc, char ** argv)
 {
    Interface ui(argc, argv, "Test", Point(-200, 200), Point(200, -200));    // initialize OpenGL
    Ball ball;                           // initialize the game state
