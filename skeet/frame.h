@@ -15,9 +15,9 @@
 #include "bullet.h"
 #include "banner.h"
 
-#define LINUX
+//#define LINUX
 //#define MAC_XCODE
-//#define WIN_VISUAL_STUDIO
+#define WIN_VISUAL_STUDIO
 
 #ifdef MAC_XCODE
 #include <openGL/gl.h>    // Main OpenGL library
