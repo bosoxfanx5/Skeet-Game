@@ -8,17 +8,18 @@
 
 #include "item.h"
 
-void draw()
-{
+//void draw()
+//{
+//
+//}
 
+void move(Point & newLocation)
+{
+   this.location.setX = newLocation.getX();
+   this.location.setY = newLocation.getY();
 }
 
-void move()
+void turn(int newOrientation)
 {
-
-}
-
-void turn()
-{
-
+   this.orientation = newOrientation;
 }

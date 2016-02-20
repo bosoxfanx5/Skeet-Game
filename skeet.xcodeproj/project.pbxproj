@@ -20,6 +20,7 @@
 		849050581C6713FC00B4873B /* bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050561C6713FC00B4873B /* bullet.cpp */; };
 		8490505B1C6714A800B4873B /* pigeon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849050591C6714A800B4873B /* pigeon.cpp */; };
 		8490505E1C6715C900B4873B /* banner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8490505C1C6715C900B4873B /* banner.cpp */; };
+		84ABD58F1C790261008FBB89 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD58E1C790261008FBB89 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +60,7 @@
 		8490505A1C6714A800B4873B /* pigeon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pigeon.h; sourceTree = "<group>"; };
 		8490505C1C6715C900B4873B /* banner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = banner.cpp; sourceTree = "<group>"; };
 		8490505D1C6715C900B4873B /* banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = banner.h; sourceTree = "<group>"; };
+		84ABD58E1C790261008FBB89 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		849050331C6676D300B4873B /* skeet */ = {
 			isa = PBXGroup;
 			children = (
+				84ABD58E1C790261008FBB89 /* main.cpp */,
 				8490503B1C6676F200B4873B /* point.cpp */,
 				8490503C1C6676F200B4873B /* point.h */,
 				8490503D1C6676F200B4873B /* uiDraw.cpp */,
@@ -178,6 +181,7 @@
 			files = (
 				849050421C6676F200B4873B /* point.cpp in Sources */,
 				849050581C6713FC00B4873B /* bullet.cpp in Sources */,
+				84ABD58F1C790261008FBB89 /* main.cpp in Sources */,
 				849050521C67121E00B4873B /* velocity.cpp in Sources */,
 				8490504C1C670ED900B4873B /* frame.cpp in Sources */,
 				8490504F1C67106900B4873B /* item.cpp in Sources */,
@@ -305,6 +309,7 @@
 				8490503A1C6676D300B4873B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

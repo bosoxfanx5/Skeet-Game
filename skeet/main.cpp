@@ -7,8 +7,12 @@
 //
 
 #include <iostream>
+#include "frame.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char * argv[])
+{
+   Frame mainFrame;
+   
    // insert code here...
    std::cout << "Hello, World!\n";
     return 0;

@@ -19,7 +19,7 @@ class Item
       //Member Data
       Velocity velocity;
       Point location;
-   int orientation;
+      int orientation;
    
    private:
       //Member Functions
