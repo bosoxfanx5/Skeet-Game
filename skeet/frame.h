@@ -16,8 +16,8 @@
 #include "banner.h"
 
 //#define LINUX
-//#define MAC_XCODE
-#define WIN_VISUAL_STUDIO
+#define MAC_XCODE
+//#define WIN_VISUAL_STUDIO
 
 #ifdef MAC_XCODE
 #include <openGL/gl.h>    // Main OpenGL library

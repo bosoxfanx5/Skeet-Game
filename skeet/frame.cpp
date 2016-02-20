@@ -8,15 +8,14 @@
 
 #include "frame.h"
 
-<<<<<<< HEAD
 //#define LINUX
 //#define MAC_XCODE
 #define WIN_VISUAL_STUDIO
-=======
+//
 #define LINUX
 //#define MAC_XCODE
 //#define WIN_VISUAL_STUDIO
->>>>>>> ef6e41b3fc5ccb389c16aa11f83fa764ab698317
+//
 
 #ifdef MAC_XCODE
 #include <openGL/gl.h>    // Main OpenGL library
