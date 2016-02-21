@@ -14,7 +14,7 @@
 * I get called back from OpenGL to draw a frame.
 * When I am finished drawing, then the graphics
 * engine will wait until the proper amount of
-* time has passed and put the drawing on the screen.
+* time has passed and put the drawing on the screen. Brooks Rules
 **************************************/
 void callBack(const Frame *pFrame, void * p)
 {
