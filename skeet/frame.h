@@ -10,14 +10,15 @@
 #define frame_h
 
 #include <stdio.h>
+#include "uiInteract.h"
 #include "rifle.h"
 #include "pigeon.h"
 #include "bullet.h"
 #include "banner.h"
 
 //#define LINUX
-//#define MAC_XCODE
-#define WIN_VISUAL_STUDIO
+#define MAC_XCODE
+//#define WIN_VISUAL_STUDIO
 
 #ifdef MAC_XCODE
 #include <openGL/gl.h>    // Main OpenGL library
@@ -39,10 +40,12 @@
 #include <math.h>
 #endif // WIN_VISUAL_STUDIO
 
-class Frame
+class Frame : public Interface
 {
    public:
       //Member Data
+      Frame() : Interface() {}
+   
       Rifle rifles;
       Pigeon pigeons;
       Bullet bullets; // <= 5
@@ -50,14 +53,12 @@ class Frame
       int frameRate = 30;
       void draw();
       //void draw(void (*callBack)(const Frame *));
-      void draw(void (*callBack)(const Frame *, void *), void *p);
+      //void draw(void (*callBack)(const Frame *, void *), void *p);
    
    private:
       //Member Functions
-      
-   
-      static void *p;                   // for client
-      static void (*callBack)(const Frame *, void *);
+      //static void *p;                   // for client
+      //static void (*callBack)(const Frame *, void *);
       //static void (*callBack)(const Frame *);
 };
 

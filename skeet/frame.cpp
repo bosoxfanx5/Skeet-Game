@@ -12,10 +12,6 @@
 #define MAC_XCODE
 //define WIN_VISUAL_STUDIO
 //
-#define LINUX
-//#define MAC_XCODE
-//#define WIN_VISUAL_STUDIO
-//
 
 #ifdef MAC_XCODE
 #include <openGL/gl.h>    // Main OpenGL library
@@ -38,16 +34,22 @@
 #endif // WIN_VISUAL_STUDIO
 
 //Member Functions
-void Frame::draw(void (*callBack)(const Frame *, void *), void *p)
+void Frame::draw()
 {
    // setup the callbacks
-   this->p = p;
-   this->callBack = callBack;
+   //Frame::p = p;
+   //Frame::callBack = callBack;
 
-   glutMainLoop();
+   //this->p = p;
+   //this->callBack = callBack;
+
+   
+   //glutMainLoop();
 
    return;
 }
+
+
 
 //void Frame::draw(void (*callBack)(const Frame *))
 //{

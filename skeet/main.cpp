@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include "frame.h"
+#include "uiInteract.h"
+#include "point.h"
 
 /*************************************
 * All the interesting work happens here, when
@@ -55,11 +57,15 @@ int main(int argc, const char * argv[])
 	// insert code here...
 	std::cout << "Hello, World!\n";
 	return 0;
+   
+    Frame ourFrame;
 
-	//Frame ourFrame(argc, argv, "Test", Point(-200, 200), Point(200, -200));    // initialize OpenGL
-	Frame ourFrame;    // initialize OpenGL
+	Interface ui(argc, argv, "Test", Point(-200, 200), Point(200, -200));    // initialize OpenGL
+	//Frame ourFrame;    // initialize OpenGL
 						 //Ball ball;                           // initialize the game state
-	mainFrame.draw(callBack, &ourFrame);             // set everything into action
+   
+    //void run(void (*callBack)(const Interface *, void *), void *p);
+	ui.run(callBack, &ourFrame);             // set everything into action
 
 	return 0;
 }

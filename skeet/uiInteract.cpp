@@ -17,26 +17,29 @@
 #include <cstdlib>    // for rand()
 
 
-#ifdef __APPLE__
+//#define LINUX
+#define MAC_XCODE
+//#define WIN_VISUAL_STUDIO
+
+#ifdef MAC_XCODE
 #include <openGL/gl.h>    // Main OpenGL library
 #include <GLUT/glut.h>    // Second OpenGL library
-#endif // __APPLE__
+#endif // MAC_XCODE
 
-#ifdef __linux__
+#ifdef LINUX
 #include <GL/gl.h>    // Main OpenGL library
 #include <GL/glut.h>  // Second OpenGL library
-#endif // __linux__
+#endif // LINUX
 
-#ifdef _WIN32
+#ifdef WIN_VISUAL_STUDIO
 #include <stdio.h>
 #include <stdlib.h>
-#include <Gl/glut.h>           // OpenGL library we copied
+#include <glut.h>           // OpenGL library we copied
 #include <ctime>            // for ::Sleep();
 #include <Windows.h>
-
 #define _USE_MATH_DEFINES
 #include <math.h>
-#endif // _WIN32
+#endif // WIN_VISUAL_STUDIO
 
 #include "uiInteract.h"
 #include "point.h"
@@ -54,18 +57,18 @@ using namespace std;
 void sleep(unsigned long msSleep)
 {
    // Windows handles sleep one way
-#ifdef _WIN32
+#ifdef WIN_VISUAL_STUDIO
    ::Sleep(msSleep);
-
+   
    // Unix-based operating systems (OS-X, Linux) do it another
 #else // LINUX, XCODE
    timespec req = {};
    time_t sec = (int)(msSleep / 1000);
    msSleep -= (sec * 1000);
-
+   
    req.tv_sec = sec;
    req.tv_nsec = msSleep * 1000000L;
-
+   
    while (nanosleep(&req, &req) == -1)
       ;
 #endif // LINUX, XCODE
@@ -97,13 +100,13 @@ void drawCallback()
    //loop until the timer runs out
    if (!ui.isTimeToDraw())
       sleep((unsigned long)((ui.getNextTick() - clock()) / 1000));
-
+   
    // from this point, set the next draw time
    ui.setNextDrawTime();
-
+   
    // bring forth the background buffer
    glutSwapBuffers();
-
+   
    // clear the space at the end
    ui.keyEvent();
 }
@@ -199,7 +202,7 @@ void Interface::keyEvent()
 
 
 /************************************************************************
- * INTERFACE : IS TIME TO DRAW
+ * INTEFACE : IS TIME TO DRAW
  * Have we waited long enough to draw swap the background buffer with
  * the foreground buffer?
  *************************************************************************/
@@ -227,7 +230,7 @@ void Interface::setNextDrawTime()
  *************************************************************************/
 void Interface::setFramesPerSecond(double value)
 {
-    timePeriod = (1 / value);
+   timePeriod = (1 / value);
 }
 
 /***************************************************
@@ -257,7 +260,7 @@ Interface::~Interface()
 
 
 /************************************************************************
- * INTERFACE : INITIALIZE
+ * INTEFACE : INITIALIZE
  * Initialize our drawing window.  This will set the size and position,
  * get ready for drawing, set up the colors, and everything else ready to
  * draw the window.  All these are part of initializing Open GL.
@@ -265,31 +268,31 @@ Interface::~Interface()
  *           argv:       The actual command-line parameters
  *           title:      The text for the titlebar of the window
  *************************************************************************/
-void Interface::initialize(int argc, char ** argv, const char * title, Point topLeft, Point bottomRight)
+void Interface::initialize(int argc, char ** argv, const char * title)
 {
    if (initialized)
       return;
    
    // set up the random number generator
    srand((long)(argv));
-
+   
    // create the window
    glutInit(&argc, argv);
    Point point;
    glutInitWindowSize(   // size of the window
-      (int)(bottomRight.getX() - topLeft.getX()),
-      (int)(topLeft.getY() - bottomRight.getY()));
-            
-   glutInitWindowPosition( 10, 10);                // initial position 
+                      (int)(point.getXMax() - point.getXMin()),
+                      (int)(point.getYMax() - point.getYMin()));
+   
+   glutInitWindowPosition( 10, 10);                // initial position
    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);  // double buffering
    glutCreateWindow(title);              // text on titlebar
    glutIgnoreKeyRepeat(true);
    
    // set up the drawing style: B/W and 2D
    glClearColor(0, 0, 0, 0);          // Black is the background color
-   gluOrtho2D((int)topLeft.getX(), (int)bottomRight.getX(),
-              (int)bottomRight.getY(), (int)topLeft.getY()); // 2D environment
-
+   gluOrtho2D((int)point.getXMin(), (int)point.getXMax(),
+              (int)point.getYMin(), (int)point.getYMax()); // 2D environment
+   
    // register the callbacks so OpenGL knows how to call us
    glutDisplayFunc(   drawCallback    );
    glutIdleFunc(      drawCallback    );
@@ -318,9 +321,9 @@ void Interface::run(void (*callBack)(const Interface *, void *), void *p)
    // setup the callbacks
    this->p = p;
    this->callBack = callBack;
-
+   
    glutMainLoop();
-
+   
    return;
 }
 

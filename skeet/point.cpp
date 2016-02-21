@@ -15,7 +15,8 @@
  * POINT : CONSTRUCTOR WITH X,Y
  * Initialize the point to the passed position
  *****************************************/
-Point::Point(float x, float y) : x(0.0), y(0.0)
+Point::Point(float x, float y) : x(0.0), y(0.0),
+check(false), dead(false), wrap(false)
 {
    setX(x);
    setY(y);
@@ -27,7 +28,39 @@ Point::Point(float x, float y) : x(0.0), y(0.0)
  *******************************************/
 void Point::setX(float x)
 {
-   this->x = x;
+   assert(xMin < xMax);
+   
+   // wrap as necessary
+   if (wrap)
+   {
+      this->x = x;
+      while (this->x > xMax)
+         this->x -= (xMax - xMin);
+      while (this->x < xMin)
+         this->x += (xMax - xMin);
+   }
+   
+   // trivial non-checking assignment
+   else if (!check || (x >= xMin && x <= xMax))
+      this->x = x;
+   
+   // of the screen
+   else
+      dead = true;
+}
+
+/********************************************
+ * POINT : Assignmenet
+ *******************************************/
+const Point & Point :: operator = (const Point & rhs)
+{
+   x        = rhs.x;
+   y        = rhs.y;
+   check    = rhs.check;
+   dead     = rhs.dead;
+   wrap     = rhs.wrap;
+   
+   return *this;
 }
 
 /*******************************************
@@ -36,8 +69,27 @@ void Point::setX(float x)
  *******************************************/
 void Point::setY(float y)
 {
-   this->y = y;
-} 
+   assert(yMin < yMax);
+   
+   // wrap as necessary
+   if (wrap)
+   {
+      this->y = y;
+      while (this->y > yMax)
+         this->y -= (yMax - yMin);
+      while (this->y < yMin)
+         this->y += (yMax - yMin);
+   }
+   
+   // trivial non-checking assignment
+   else if (!check || (y >= yMin && y <= yMax))
+      this->y = y;
+   
+   // of the screen
+   else
+      dead = true;
+   
+}
 
 /******************************************
  * POINT insertion
@@ -58,10 +110,9 @@ std::istream & operator >> (std::istream & in, Point & pt)
    float x;
    float y;
    in >> x >> y;
-
+   
    pt.setX(x);
    pt.setY(y);
-
+   
    return in;
 }
-   
