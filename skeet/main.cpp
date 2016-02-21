@@ -57,9 +57,19 @@ int main(int argc, const char * argv[])
 	return 0;
 
 	//Frame ourFrame(argc, argv, "Test", Point(-200, 200), Point(200, -200));    // initialize OpenGL
-	Frame ourFrame();    // initialize OpenGL
+	Frame ourFrame;    // initialize OpenGL
 						 //Ball ball;                           // initialize the game state
-	mainFrame.draw(callBack);             // set everything into action
+	mainFrame.draw(callBack, &ourFrame);             // set everything into action
 
 	return 0;
+}
+
+int mainExample(int argc, char ** argv)
+{
+   //Interface ui(argc, argv, "Test", Point(-200, 200), Point(200, -200));    // initialize OpenGL
+   //Ball ball;                           // initialize the game state
+   //ui.run(callBack, &ball);             // set everything into action
+   
+   //return 0;
+   return 0;
 }
