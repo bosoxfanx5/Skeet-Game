@@ -9,8 +9,8 @@
 #include "frame.h"
 
 //#define LINUX
-//#define MAC_XCODE
-#define WIN_VISUAL_STUDIO
+#define MAC_XCODE
+//define WIN_VISUAL_STUDIO
 //
 #define LINUX
 //#define MAC_XCODE
@@ -43,8 +43,19 @@ void Frame::draw(void (*callBack)(const Frame *, void *), void *p)
    // setup the callbacks
    this->p = p;
    this->callBack = callBack;
-      
+
    glutMainLoop();
-      
+
    return;
 }
+
+//void Frame::draw(void (*callBack)(const Frame *))
+//{
+//   // setup the callbacks
+//   this->p = p;
+//   this->callBack = callBack;
+//
+//   glutMainLoop();
+//
+//   return;
+//}

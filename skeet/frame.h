@@ -48,14 +48,17 @@ class Frame
       Bullet bullets; // <= 5
       Banner banner;
       int frameRate = 30;
+      void draw();
+      //void draw(void (*callBack)(const Frame *));
+      void draw(void (*callBack)(const Frame *, void *), void *p);
    
    private:
       //Member Functions
-      void draw();
-      void draw(void (*callBack)(const Frame *, void *), void *p);
+      
    
       static void *p;                   // for client
       static void (*callBack)(const Frame *, void *);
+      //static void (*callBack)(const Frame *);
 };
 
 #endif /* frame_h */
